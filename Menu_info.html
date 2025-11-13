@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Grid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: url('https://i.pinimg.com/originals/99/cd/09/99cd0925c516b5d0a740dffd03c3e0df.gif') center/cover no-repeat fixed;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .card img {
+        height: 160px;
+      }
+    }
+
+
+    .menu-group {
+      display: flex;
+      background: transparent;
+      flex-wrap: wrap;
+      gap: 45px;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .menu-item {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 15px 25px;
+      width: 200px;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.65);
+    }
+
+    .menu-item h3 {
+      color: #3b2a1a;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .menu-item p {
+      color: #5a4b3b;
+      font-size: 14px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .page-section {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .price-btn {
+      display: inline-block;
+      background: #3b2a1a;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 8px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .price-btn:hover {
+      background: #5a3d24;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="special" class="page-section card">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menu-img/BBQ_ribs.jpg" alt="Dish Image">
+        <h3>BBQ Ribs</h3>
+        <div class="price-btn">₱328.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/CTS.jpg" alt="Dish Image">
+        <h3>Crispy Tofu Square</h3>
+        <div class="price-btn">₱108.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Lasagna.jpg" alt="Dish Image">
+        <h3>Lasagna</h3>
+        <div class="price-btn">₱129.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/LBP.jpg" alt="Dish Image">
+        <h3>Lemon Butter Porkchop</h3>
+        <div class="price-btn">₱278.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/SalT.avif" alt="Dish Image">
+        <h3>Pasto Con Tonno</h3>
+        <div class="price-btn">₱269.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/TMP.avif" alt="Dish Image">
+        <h3>Truffle Mushroom</h3>
+        <div class="price-btn">₱208.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <div id="hot" class="page-section">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menu-img/Affogato.jpg" alt="Coffee">
+        <h3>Affogato</h3>
+        <div class="price-btn">₱149.00</div>
+      </div>
+
+
+      <div class="menu-item">
+        <img src="Menu-img/Americano.webp" alt="Tea">
+        <h3>Americano</h3>
+        <div class="price-btn">₱78.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/CM.jpg" alt="Tea">
+        <h3>Cafe Mocha</h3>
+        <div class="price-btn">₱128.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cappuccino.jpg" alt="Tea">
+        <h3>Capuccino</h3>
+        <div class="price-btn">₱108.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/CarMach.jpg" alt="Tea">
+        <h3>Caramel Macchiato</h3>
+        <div class="price-btn">₱108.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Espresso.webp" alt="Tea">
+        <h3>Espresso</h3>
+        <div class="price-btn">₱50.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/FlaWhi.jpg" alt="Tea">
+        <h3>Flat White</h3>
+        <div class="price-btn">₱108.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Latte.jpg" alt="Tea">
+        <h3>Latte</h3>
+        <div class="price-btn">₱98.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Le Tea.jpg" alt="Tea">
+        <h3>Lemon Tea</h3>
+        <div class="price-btn">₱68.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/MacLatte.jpg" alt="Tea">
+        <h3>Matcha Latte</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/SClatte.webp" alt="Tea">
+        <h3>Salted Caramel Latte</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/SpanLatte.jpeg" alt="Tea">
+        <h3>Spanish Latte</h3>
+        <div class="price-btn">₱108.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/VanLatte.webp" alt="Tea">
+        <h3>Vanilla Latte</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <div id="cold" class="page-section">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menu-img/Cold-CarLatte.jpg" alt="Iced Coffee">
+        <h3>Caramel Latte</h3>
+        <div class="price-btn">₱128.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-Americano.jpg" alt="Lemonade">
+        <h3>Americano</h3>
+        <div class="price-btn">₱78.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-Capuccino.webp" alt="Lemonade">
+        <h3>Cappuccino</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-CaraMach.jpg" alt="Lemonade">
+        <h3>Caramel Macchiato</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-WhCaMoc.jpg" alt="Iced Coffee">
+        <h3>White Caramel Mocha</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-DirMatcha.jpg" alt="Lemonade">
+        <h3>Dirty Matcha</h3>
+        <div class="price-btn">₱158.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-FlaWhi.jpg" alt="Lemonade">
+        <h3>Flat White</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-Latte.jpg" alt="Lemonade">
+        <h3>Latte</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-Lemonade.webp" alt="Iced Coffee">
+        <h3>Lemonade</h3>
+        <div class="price-btn">₱89.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-MatcLatte.jpg" alt="Lemonade">
+        <h3>Matcha Latte</h3>
+        <div class="price-btn">₱148.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-moclatte.jpg" alt="Lemonade">
+        <h3>Mocha Latte</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-poplatte.jpg" alt="Lemonade">
+        <h3>Popcorn Latte</h3>
+        <div class="price-btn">₱158.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-salcarlatte.jpg" alt="Iced Coffee">
+        <h3>Salted Caramel latte</h3>
+        <div class="price-btn">₱128.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/SpanLatte.jpeg" alt="Lemonade">
+        <h3>Spanish Latte</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-tiramisu.jpg" alt="Lemonade">
+        <h3>Tiramisu Latte</h3>
+        <div class="price-btn">₱148.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Cold-vanilatte.webp" alt="Lemonade">
+        <h3>Vanilla Latte</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <div id="frappe" class="page-section">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-WhiCarMoch" alt="Mocha Frappe">
+        <h3>White Caramel Mocha</h3>
+        <div class="price-btn">₱148.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-DouMoc.webp" alt="Vanilla Frappe">
+        <h3>Double Mocha</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-GoziMilo.jpg" alt="Mocha Frappe">
+        <h3>Godzilla Milo</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-JavaChip.jpg" alt="Mocha Frappe">
+        <h3>Java Chip</h3>
+        <div class="price-btn">₱148.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-Matcha.webp" alt="Mocha Frappe">
+        <h3>Matcha</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-MixBerries.jpeg" alt="Mocha Frappe">
+        <h3>Mixed Berries</h3>
+        <div class="price-btn">₱178.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-NutMocha.webp" alt="Mocha Frappe">
+        <h3>Nutella Mocha Frappe</h3>
+        <div class="price-btn">₱189.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-OreoCook.jpg" alt="Mocha Frappe">
+        <h3>Oreo Cookie</h3>
+        <div class="price-btn">₱118.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-Popcorn.jpg" alt="Mocha Frappe">
+        <h3>Popcorn</h3>
+        <div class="price-btn">₱189.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-SalCar.webp" alt="Mocha Frappe">
+        <h3>Salted Caramel</h3>
+        <div class="price-btn">₱168.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/Frappe-strawgalaxywebp" alt="Mocha Frappe">
+        <h3>Strawberry Galaxy</h3>
+        <div class="price-btn">₱128.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <div id="milkshake" class="page-section">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menu-img/milkshake-chocolate.jpeg" alt="Strawberry Milkshake">
+        <h3>Chocolate</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/milkshake-mixberries.jpg" alt="Chocolate Milkshake">
+        <h3>Mixed Berries</h3>
+        <div class="price-btn">₱178.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/milkshake-strawberry.jpg" alt="Strawberry Milkshake">
+        <h3>Strawberry</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/milkshake-ManStraw.jpeg" alt="Chocolate Milkshake">
+        <h3>Strawberry Mango</h3>
+        <div class="price-btn">₱158.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/milkshake-strawban.webp" alt="Strawberry Milkshake">
+        <h3>Strawberry Banana</h3>
+        <div class="price-btn">₱158.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menu-img/milkshaake-vanilla.jpeg" alt="Chocolate Milkshake">
+        <h3>Vanilla</h3>
+        <div class="price-btn">₱138.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <div id="appetizer" class="page-section">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menuimg-2/Baked Tortilla.jpg" alt="Strawberry Milkshake">
+        <h3>Baked Tortilla</h3>
+        <div class="price-btn">₱298.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/French Frieswebp" alt="Chocolate Milkshake">
+        <h3>French Fries</h3>
+        <div class="price-btn">₱78.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Popcorn Chicken.jpeg" alt="Strawberry Milkshake">
+        <h3>Popcorn Chicken</h3>
+        <div class="price-btn">₱168.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <div id="entree" class="page-section">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menuimg-2/Chicken.jpg" alt="Strawberry Milkshake">
+        <h3>Chicken</h3>
+        <div class="price-btn">₱189.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Pasta.jpg" alt="Chocolate Milkshake">
+        <h3>₱asta</h3>
+        <div class="price-btn">₱248.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <div id="PiznSan" class="page-section">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menuimg-2/Bread.webp" alt="Strawberry Milkshake">
+        <h3>Bread</h3>
+        <div class="price-btn">₱139.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Egg Drop.avif" alt="Strawberry Milkshake">
+        <h3>Egg Drop</h3>
+        <div class="price-btn">₱198.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Club House.jpg" alt="Chocolate Milkshake">
+        <h3>Nano Club House</h3>
+        <div class="price-btn">₱208.00</div>
+      </div>
+
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Pizette.jpeg" alt="Strawberry Milkshake">
+        <h3>Pizzette</h3>
+        <div class="price-btn">₱78.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <div id="dessert" class="page-section">
+    <div class="menu-group card">
+      <div class="menu-item">
+        <img src="Menuimg-2/Brownie.jpg" alt="Strawberry Milkshake">
+        <h3>Brownie</h3>
+        <div class="price-btn">₱39.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Cheescake.webp" alt="Chocolate Milkshake">
+        <h3>Cheesecake</h3>
+        <div class="price-btn">₱259.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Croffle.jpeg" alt="Strawberry Milkshake">
+        <h3>Croffle</h3>
+        <div class="price-btn">₱140.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Croissants.jpg" alt="Chocolate Milkshake">
+        <h3>Croissant</h3>
+        <div class="price-btn">₱89.00</div>
+      </div>
+
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Flat Croissant.jpg" alt="Strawberry Milkshake">
+        <h3>Flat Croissant</h3>
+        <div class="price-btn">₱89.00</div>
+      </div>
+
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Cake in Can.jpg" alt="Strawberry Milkshake">
+        <h3>Cake in Can</h3>
+        <div class="price-btn">₱178.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Maritozzo.jpg" alt="Chocolate Milkshake">
+        <h3>Maritozzo</h3>
+        <div class="price-btn">₱208.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="Menuimg-2/Tiramisu.jpg" alt="Strawberry Milkshake">
+        <h3>Tiramisu</h3>
+        <div class="price-btn">₱250.00</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
